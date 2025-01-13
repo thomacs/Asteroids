@@ -39,6 +39,10 @@ def main():
         for object in updatable:
             object.update(dt)
 
+        for asteroid in asteroids:
+            if asteroid.check_collision(player_1):
+                print("Game over!w")
+                exit()
 
         # Draw sprites
         for object in drawable:
